@@ -1,17 +1,10 @@
 .Link {
-  text-decoration: none;
-  padding: 12px;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1px;
-  color: grey;
-  transition: all 0.5s ease;
-  text-shadow: 2px 2px 4px rgb(85, 85, 132);
+  width: 46px;
+height: 44px;
+top: 20px;
+left: 20px;
+gap: 0px;
+opacity: 0px;
 }
 
 
-  
-.Link:focus,
-.Link:hover {
-  color: rgb(61, 60, 60);
-}

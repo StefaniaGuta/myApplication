@@ -23,15 +23,15 @@ function PageLogin() {
 
   return (
     <section className={style.PageLoginSection}>
-      <h1 className={style.PageLoginTitle}>Please enter your email and password</h1>
-      <form onSubmit={handleSubmit}>
+      <h1 className={style.PageLoginTitle}>LOG IN</h1>
+      <form onSubmit={handleSubmit} className={style.LoginForm}>
         <label className={style.PageLogInLabel}>
-          Email
+         
           < input className={style.PageLogInInput}
             type="email"
             name="email"
             title="Enter your email"
-            placeholder="Example user@mail.com"
+            placeholder="Email *"
             required
             value={email}
             onChange={handleChange}
@@ -39,17 +39,20 @@ function PageLogin() {
         </label>
 
         < label className={style.PageLogInLabel}>
-          Password
+         
           <input className={style.PageLogInInput}
             type="password"
             name="password"
             title="Enter your password"
+            placeholder="Password *"
             required
             value={password}
             onChange={handleChange}
           />
-            <button className={style.pageLogInBtn} type="submit" >Log In</button>
         </label>
+            <button className={style.pageLogInBtn} type="submit" >LOG IN</button>
+            <span></span>
+            <button className={style.pageLogInBtn} type="submit" disabled={true}>REGISTER</button>
       </form>
     </section>
   );

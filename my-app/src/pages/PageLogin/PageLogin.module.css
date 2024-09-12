@@ -1,69 +1,72 @@
 .PageLoginSection {
   display: flex;
   flex-direction: column;
-  min-width: 420px;
-  max-width: 550px;
-  margin: 3em auto;
-  padding: 1em;
+  align-items: center;
+  width: 280px;
+  height: 353px;
+  margin-top: 50px;
 }
 
 .PageLoginTitle {
-  font-size: 16px;
-  color: rgb(61, 61, 61);
+  width: 60px;
+  height: 17px;
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17.01px;
+  letter-spacing: 0.04em;
   text-align: center;
-  margin-bottom: 20px;
-}
+  color: #FC842D;
 
-.PageLogInLabel {
-  display: flex;
-  flex-direction: column;
-  font-size: 16px;
-  color: rgb(61, 61, 61);
 }
 
 .PageLogInInput {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0 20px;
-  display: inline-block;
+  width: 250px;
+  height: 36px;
+  margin: 10px;
   box-sizing: border-box;
-  transition: background-color 0.5s ease-in-out;
-  border: 1px solid rgb(108, 107, 107);
-  border-radius: 20px;
   cursor: pointer;
-  font-size: 15px;
-  box-shadow: 17px 17px 84px 18px rgba(21, 15, 15, 0.2) inset;
   outline: none;
+  border: none;
+  border-bottom: 1px solid #E0E0E0;
 }
 
 .PageLogInInput::placeholder {
-  color: #ffffff;
-  font-style: italic; 
-  font-size: 16px; 
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17.01px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color: #9B9FAA;
 }
 
-.PageLogInInput:focus {
-  background-color: #f9f1f1;
-  box-shadow: rgba(64, 64, 75, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-  border: 2px solid rgb(54, 52, 52);
+.LoginForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .pageLogInBtn {
-  display: flex;
+  width: 182px;
+  height: 44px;
+  margin-top: 20px;
+  border-radius: 30px;
+  border: 2px solid #FC842D;
+  background-color: #FFFFFF;
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17.01px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #FC842D;
   align-items: center;
-  justify-content: center;
-  width: 100px;
-  height: 100%;
-  padding: 5px;
-  border-radius: 20px;
-  color: #ffffff;
-  cursor: pointer;
-  font-size: 15px;
-  box-shadow: 17px 17px 84px 18px rgba(21, 15, 15, 0.2) inset;
-  border: 1px solid rgb(108, 107, 107);
 }
 
 .pageLogInBtn:hover,
 .pageLogInBtn:focus {
-  background-color: rgb(114, 113, 114);
+  background-color: #FC842D;
+  box-shadow: 0px 4px 10px 0px #FC842D80;
+  color: #FFFFFF;
 }

@@ -11,6 +11,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Password is required'],
   },
+  name: {
+    type: String,
+    defaul: null,
+  },
   subscription: {
     type: String,
     enum: ['starter', 'pro', 'business'],

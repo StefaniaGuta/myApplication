@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import {register, logIn, logOut, fetchCurrentUser} from './authOperations';
+import { register, logIn, logOut, fetchCurrentUser } from './authOperations';
 
 const initialState = {
   user: { name: null, email: null },
@@ -18,30 +18,22 @@ const authSlice = createSlice({
         state.user = action.payload.user;
         state.token = action.payload.token;
         state.isLoggedIn = true;
-        state.content = action.payload.content;
       })
       .addCase(logIn.fulfilled, (state, action) => {
-        state.user = action.payload.user;
+        state.user = action.payload.user; // Salvăm și numele în store
         state.token = action.payload.token;
         state.isLoggedIn = true;
-        state.content = action.payload.content;
       })
       .addCase(logOut.fulfilled, state => {
         state.user = { name: null, email: null };
         state.token = null;
         state.isLoggedIn = false;
       })
-      .addCase(fetchCurrentUser.pending, state => {
-        state.isRefreshing = true;
-      })
       .addCase(fetchCurrentUser.fulfilled, (state, action) => {
-        state.user = action.payload;
+        state.user = action.payload; // În cazul fetchCurrentUser, tot așa
         state.isLoggedIn = true;
-        state.isRefreshing = false;
-      })
-      .addCase(fetchCurrentUser.rejected, state => {
-        state.isRefreshing = false;
       });
   },
 });
+
 export const authReducer = authSlice.reducer;

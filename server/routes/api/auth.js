@@ -12,7 +12,7 @@ const joiSubscriptionSchema = Joi.object({
 });
 
 router.post("/users/signup", async (req, res) => {
-  const { email, password } = req.body;
+  const { email, password, name } = req.body;
 
   try {
     const existingUser = await User.findOne({ email });
@@ -29,7 +29,8 @@ router.post("/users/signup", async (req, res) => {
     const newUser = new User({
       email,
       password,
-      subscription: "starter",
+      name,
+      subscription: "starter"
     });
 
     await newUser.save();
@@ -37,6 +38,7 @@ router.post("/users/signup", async (req, res) => {
     res.status(201).json({
       user: {
         email: newUser.email,
+        name: newUser.name,
         subscription: newUser.subscription
       },
     });
@@ -71,6 +73,7 @@ router.post("/users/login", async (req, res) => {
       token,
       user: {
         email: user.email,
+        name: user.name,
         subscription: user.subscription
       },
     });
@@ -102,9 +105,10 @@ router.get("/users/logout", authMiddleware, async (req, res) => {
 router.get("/users/current", authMiddleware, async (req, res) => {
   try{
     const user = req.user;
-    console.log(user)
+
     res.status(200).json({
       email: user.email,
+      name:user.name,
       subscription: user.subscription
     });
 
@@ -134,6 +138,7 @@ router.patch("/", authMiddleware, async (req, res, next) => {
     res.status(200).json({
       user: {
         email: user.email,
+        name:user.name,
         subscription: user.subscription
       },
     });

@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 //import authSelectors from '../../redux/auth/authSelectors';
-
+import logo from './logo.png'
 import style from './Navigation.module.css';
 
 function Navigation() {
@@ -11,10 +11,11 @@ function Navigation() {
   return (
     <nav>
       <Link className={style.Link} to="/" >
-        Home
+        <img src={logo} alt='logo'/>
       </Link>
     </nav>
   );
 }
+
 
 export default Navigation;

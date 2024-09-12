@@ -26,28 +26,26 @@ function PageRegistration() {
 
   return (
     <section className={style.PageRegistrationSection}>
-      <h1 className={style.PageRegistrationTitle}>Please enter your registration details</h1>
-      <form onSubmit={handleSubmit}>
-        <label className={style.PageRegistrationTitle}>
-          Name
+      <h1 className={style.PageRegistrationTitle}>REGISTER</h1>
+      <form onSubmit={handleSubmit} className={style.RegisterForm}>
+        <label >
           <input className={style.PageRegistrationInput}
             type="text"
             name="name"
             title="Name may contain only letters, apostrophe, dash and spaces."
-            placeholder="Example John"
+            placeholder="NAME *"
             required
             value={name}
             onChange={handleChange}
           />
         </label>
 
-        <label className={style.PageRegistrationTitle}>
-          Email
+        <label >
           <input className={style.PageRegistrationInput}
             type="email"
             name="email"
             title="Enter your email"
-            placeholder="Example user@mail.com"
+            placeholder="EMAIL *"
             required
             value={email}
             onChange={handleChange}
@@ -55,17 +53,21 @@ function PageRegistration() {
         </label>
 
         <label className={style.PageRegistrationLabel}>
-          Password
           <input className={style.PageRegistrationInput}       
             type="password"
             name="password"
+            placeholder="PASSWORD *"
             required
             value={password}
             onChange={handleChange}
           />
         </label>
         <button className={style.PageRegistrationBtn} type="submit">
-          Register
+          REGISTER
+        </button>
+        <span></span>
+        <button className={style.PageRegistrationBtn} type="submit" disabled={true}>
+          LOG IN
         </button>
       </form>
     </section>

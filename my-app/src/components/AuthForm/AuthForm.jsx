@@ -4,13 +4,13 @@ import style from './AuthForm.module.css';
 
 function AuthForm() {
   return (
-    <nav>
-      <Link className={style.Link} to="/register">
-        Sign up
+    <nav className={style.Nav}>
+      <Link className={style.Link} to="/login">
+        LOG IN
       </Link>
       
-      <Link className={style.Link} to="/login">
-        Log in
+      <Link className={style.Link} to="/register">
+        REGISTRATION
       </Link>
     </nav>
   );

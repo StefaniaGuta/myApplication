@@ -1,14 +1,13 @@
 .Header {
-   min-width: 100%;
-   margin: 12px auto;
-   padding: 1em;
-
+   display: flex;
+   width: 300px;
+   padding: 10px;
+   border-bottom: 2px solid #E0E0E0;
 }
 
 .Box {
    display: flex;
-   justify-content: space-between;
    align-items: center;
-   padding: 0px 50px;
+   width: 270px;
 }
 
