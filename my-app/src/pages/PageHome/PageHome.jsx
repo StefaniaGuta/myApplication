@@ -1,11 +1,13 @@
-import { useDispatch } from 'react-redux';
+//import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-
+import { useNavigate} from "react-router-dom";
+//import Modal from "../ModalRecomendation/Modal";
 import style from './PageHome.module.css';
 
 function PageHome() {
-  const dispatch = useDispatch();
-  
+  //const dispatch = useDispatch();
+  const navigate = useNavigate();
+ 
   const [form, setForm] = useState({
     height: '',
     age: '',
@@ -26,7 +28,7 @@ function PageHome() {
   const handleSubmit = event => {
     event.preventDefault();
     
-    dispatch(form);
+    console.log(form);
 
     setForm({
       height: '',
@@ -35,8 +37,10 @@ function PageHome() {
       desiredWeight: '',
       bloodType: '' 
     });
-  };
 
+    navigate('/Modal');
+  };
+ 
   return (
     <section className={style.PageHomeSection}>
       <h1 className={style.PageHomeTitle}>
@@ -67,7 +71,7 @@ function PageHome() {
           />
         </label>
 
-        <label className={style.PageHomeLabel}>
+        <label>
           <input
             className={style.PageHomeInput}
             type="number"
@@ -79,7 +83,7 @@ function PageHome() {
           />
         </label>
 
-        <label className={style.PageHomeLabel}>
+        <label>
           <input
             className={style.PageHomeInput}
             type="number"
@@ -95,10 +99,11 @@ function PageHome() {
           <legend>Blood Type *</legend>
 
           <label>
-            <input 
+            <input
               type="radio"
               name="bloodType"
               value="1"
+              required
               checked={form.bloodType === '1'}
               onChange={handleChange}
             />
@@ -106,10 +111,11 @@ function PageHome() {
           </label>
 
           <label>
-            <input
+            <input 
               type="radio"
               name="bloodType"
               value="2"
+              required
               checked={form.bloodType === '2'}
               onChange={handleChange}
             />
@@ -117,10 +123,11 @@ function PageHome() {
           </label>
 
           <label>
-            <input
+            <input 
               type="radio"
               name="bloodType"
               value="3"
+              required
               checked={form.bloodType === '3'}
               onChange={handleChange}
             />
@@ -128,10 +135,11 @@ function PageHome() {
           </label>
 
           <label>
-            <input
+            <input 
               type="radio"
               name="bloodType"
               value="4"
+              required
               checked={form.bloodType === '4'}
               onChange={handleChange}
             />

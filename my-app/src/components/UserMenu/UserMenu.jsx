@@ -12,13 +12,13 @@ function UserMenu() {
   return (
     <section className={style.MenuContainer}>
       <div className={style.MenuBox}>
-        <h1 className={style.MenuTitle}> Welcome, {user.name} </h1>
+        <h1 className={style.MenuTitle}> {user.name} </h1>
       </div>
       <button className={style.MenuBtn}
         type="button"
         onClick={() => dispatch(authOperations.logOut)}
       >
-        Log Out
+        Exit
       </button>
     </section>
   );

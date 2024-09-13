@@ -1,0 +1,91 @@
+.modalCloseButton {
+  width: 320px;
+  height: 40px;
+  display: flex;
+  background-color: #EFF1F3;
+  border: none;
+  align-items: center;
+}
+
+.modalCloseButton img{
+  margin-left: 20px;
+}
+
+.modalWindow {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  height: 600px;
+  margin-top: 50px;
+  padding: 10px;
+}
+
+.title {
+  font-family: Verdana;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25.2px;
+  text-align: left;
+  width: 250px;
+  height: 50px;
+  color: #212121;
+}
+
+.kcal{
+width: 279px;
+height: 62px;
+font-family: Verdana;
+font-size: 48px;
+font-weight: 700;
+line-height: 58.34px;
+letter-spacing: 0.04em;
+text-align: center;
+color: #212121;
+}
+
+.kcal span{
+  font-size: 26px;
+  line-height: 31.6px;
+  letter-spacing: 0.04em;
+}
+
+.modalBorder{
+  width: 260px;
+  opacity: 0px;
+  border: 1px solid #E0E0E0;  
+}
+
+.foodList{
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17.01px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  padding: 0;
+  margin: 30px 0 0 0;
+}
+
+.modalBtn {
+    width: 210px;
+    height: 44px;
+    margin-top: 30px;
+    border-radius: 30px;
+    border: 2px solid #fc842d;
+    background-color: #FFFFFF;
+    font-family: Verdana;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17.01px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #FC842D;
+    align-self: center;
+}
+
+.modalBtn:hover,
+.modalBtn:focus {
+    background-color: #FC842D;
+    box-shadow: 0px 4px 10px 0px #FC842D80;
+    color: #FFFFFF;
+}

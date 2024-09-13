@@ -12,6 +12,7 @@ import { ToastContainer } from 'react-toastify';
 const PageHome = lazy(() => import('../../pages/PageHome/PageHome'));
 const PageRegistration = lazy(() => import('../../pages/PageRegistration/PageRegistration'));
 const PageLogin = lazy(() => import('../../pages/PageLogin/PageLogin'));
+const Modal = lazy(() => import('../../pages/ModalRecommendation/Modal'));
 
 
 
@@ -36,6 +37,14 @@ const App = () => {
                 element={
                   <PublicRoute>
                     <PageHome />
+                  </PublicRoute>
+                }
+              />
+              <Route
+                path="/modal"
+                element={
+                  <PublicRoute>
+                    <Modal />
                   </PublicRoute>
                 }
               />
