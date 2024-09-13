@@ -1,42 +1,100 @@
 .PageHomeSection{
   display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 550px;
-    margin: 150px;
-    padding: 10px;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+  height: 330px;
+  margin-top: 50px;
 }
 
 .PageHomeTitle {
-  font-weight: 500;
-  text-transform: uppercase;
-  color: grey;
-  transition: all 0.5s ease;
-  text-shadow: 2px 2px 4px rgb(85, 85, 132);
-  font-size: 29px;
-  margin-bottom: 10px;
-  position: absolute;
-  left: 25%;
-  top: 150px;
-}
-
-.PageHomeTitle2 {
-  color: rgb(61, 61, 61);
-  font-style: italic;
-  line-height: 1.5;
-  position: absolute;
-  left: 50px;
-  bottom: 200px;
+  font-family: Verdana;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25.2px;
   text-align: left;
+  width: 250px;
+  height: 50px;
+  top: 112px;
+  left: 20px;
+  gap: 0px;
+  opacity: 0px;
+  color: #212121;
+
 }
 
-.PageHomeText {
-  text-align: center;
-  position: absolute;
-  left: 38%;
-  bottom: 70px;
-  color: rgb(61, 61, 61);
+.HomeForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.PageHomeInput {
+  width: 250px;
+  height: 36px;
+  margin: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.PageHomeInput::placeholder {
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17.01px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color: #9B9FAA;
+}
+
+.RadioGroup{
+  width: 250px;
+  height: 45px;
+  border: none;
+  margin: 20px 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.RadioGroup legend{
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17.01px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color:#9B9FAA;
+}
+
+.PageHomeBtn {
+  width: 210px;
+  height: 44px;
+  margin-top: 20px;
+  border-radius: 30px;
+  border: 2px solid #FC842D;
+  background-color: #FFFFFF;
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17.01px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #FC842D;
+  align-items: center;
+}
+
+.PageHomeBtn:hover,
+.PageHomeBtn:focus {
+  background-color: #FC842D;
+  box-shadow: 0px 4px 10px 0px #FC842D80;
+  color: #FFFFFF;
+}
+
+
+
 
