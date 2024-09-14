@@ -86,7 +86,6 @@ router.post("/users/login", async (req, res) => {
 router.get("/users/logout", authMiddleware, async (req, res) => {
   try {
     const user = await User.findById(req.user._id);
-
     if (!user) {
       return res.status(401).json({ message: "Not authorized" });
     }

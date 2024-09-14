@@ -19,7 +19,6 @@ export const register = createAsyncThunk(
   }
 );
 
-// Funcția pentru logare (login)
 export const logIn = createAsyncThunk(
   'auth/login',
   async (credentials, thunkAPI) => {
@@ -35,7 +34,7 @@ export const logIn = createAsyncThunk(
   }
 );
 
-// Funcția pentru logout
+
 export const logOut = createAsyncThunk(
   'auth/logout',
   async (_, thunkAPI) => {
@@ -48,8 +47,6 @@ export const logOut = createAsyncThunk(
     }
   }
 );
-
-
 
 export const fetchCurrentUser = createAsyncThunk(
   'auth/current',

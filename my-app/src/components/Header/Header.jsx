@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import  authSelectors from '../../redux/auth/authSelectors';
 import AuthForm from '../AuthForm/AuthForm';
 import Navigation from '../Navigation/Navigation';
-import UserMenu from '../UserMenu/UserMenu';
+import UserInfo from '../UserInfo/UserInfo';
 import style from './Header.module.css';
 
 function Header() {
@@ -11,8 +11,8 @@ function Header() {
   return (
     <section className={style.Header}>
       <div className={style.Box}>
-        <Navigation />
-        {isLoggedIn ? <UserMenu /> : <AuthForm />}
+       <Navigation/>
+        {isLoggedIn ? <UserInfo /> : <AuthForm />}
       </div>
     </section>
   );

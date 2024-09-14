@@ -1,20 +1,24 @@
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import authOperations from '../../redux/auth/authOperations';
-//import authSelectors from '../../redux/auth/authSelectors';
-import style from './UserMenu.module.css';
 import logo from './logo.png';
 import menu from './menu.png'
 
-function UserMenu() {
+import style from './UserInfo.module.css';
+
+
+function UserInfo() {
   const dispatch = useDispatch();
-  //const name = useSelector(authSelectors.getUserName);
   const user = useSelector((state) => state.auth.user);
   
 
   return (
     <>
-    <section>
-        <img src={logo} alt='logo'/>
+     <section>
+        <Link to="/">
+          <img src={logo} alt='logo'/>
+        </Link>
+
         <img src={menu} alt='menu'/>
 
     </section>
@@ -24,7 +28,7 @@ function UserMenu() {
       </div>
       <button className={style.MenuBtn}
         type="button"
-        onClick={() => dispatch(authOperations.logOut)}
+        onClick={() => dispatch(authOperations.logOut())}
       >
         Exit
       </button>
@@ -33,4 +37,4 @@ function UserMenu() {
   );
 }
 
-export default UserMenu;
+export default UserInfo;

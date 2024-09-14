@@ -66,7 +66,7 @@ const App = () => {
                 }
               />
               <Route
-                path="info"
+                path="diary"
                 element={
                   <PrivateRoute>
                     <DiaryPage />
