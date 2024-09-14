@@ -1,12 +1,18 @@
 //import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { useNavigate} from "react-router-dom";
-//import Modal from "../ModalRecomendation/Modal";
-import style from './PageHome.module.css';
 
-function PageHome() {
+import { useSelector } from 'react-redux';
+import authSelectors from '../../redux/auth/authSelectors';
+
+import style from './MainPage.module.css';
+
+function DailyCaloriesForum() {
   //const dispatch = useDispatch();
   const navigate = useNavigate();
+  const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
+
+
  
   const [form, setForm] = useState({
     height: '',
@@ -37,11 +43,16 @@ function PageHome() {
       desiredWeight: '',
       bloodType: '' 
     });
-
-    navigate('/Modal');
+    
+    if(!isLoggedIn){
+      navigate('/Modal'); 
+    } else {
+      navigate ('/info')
+    }
   };
- 
+
   return (
+    <>
     <section className={style.PageHomeSection}>
       <h1 className={style.PageHomeTitle}>
         Calculate your daily calorie intake right now
@@ -152,7 +163,33 @@ function PageHome() {
         </button>
       </form>
     </section>
-  );
+
+    {isLoggedIn && (
+        <section className={style.SummarySection}>
+          <h2 className={style.Summary}>Summary for {new Date().toLocaleDateString()}</h2>
+          <div className={style.valuesSection}>
+            <div>
+              <p>Left</p>
+              <p>Consumed</p>
+              <p>Daily rate</p>
+              <p>n% of normal</p>
+            </div>
+            <div>
+              <p>000 kcal</p>
+              <p>000 kcal</p>
+              <p>000 kcal</p>
+              <p>000 kcal</p>
+            </div>
+          </div>
+          <h2 className={style.Summary}>Food not recommended</h2>
+          <p>Food not recommended</p>  
+        </section>
+      )}
+    
+    </>
+
+);
+
 }
 
-export default PageHome;
+export default DailyCaloriesForum;

@@ -4,11 +4,9 @@ import vector from './vector.png'
 
 import style from './Modal.module.css'
 
-
-
 const Modal = () => {
   let navigate = useNavigate();
-
+  
    return (
     <>
     <button className={style.modalCloseButton} type='button' onClick={() => navigate(-1)}>

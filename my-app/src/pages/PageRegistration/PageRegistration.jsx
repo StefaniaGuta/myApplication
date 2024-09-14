@@ -2,10 +2,12 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import authOperations from '../../redux/auth/authOperations';
 import style from './PageRegistration.module.css';
+import {useNavigate } from "react-router-dom";
 
 function PageRegistration() {
   const dispatch = useDispatch();
   const [form, setForm] = useState({ name: '', email: '', password: '' });
+  const navigate = useNavigate();
 
   const handleChange = e => {
     const { name, value } = e.currentTarget;
@@ -23,6 +25,10 @@ function PageRegistration() {
   };
 
   const { name, email, password } = form;
+
+  const handleClick = () => {
+    navigate("/login");
+  };
 
   return (
     <section className={style.PageRegistrationSection}>
@@ -66,7 +72,7 @@ function PageRegistration() {
           REGISTER
         </button>
         <span></span>
-        <button className={style.PageRegistrationBtn} type="submit" disabled={true}>
+        <button className={style.PageRegistrationBtn} type="button" onClick={handleClick}>
           LOG IN
         </button>
       </form>

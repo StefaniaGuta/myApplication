@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import {useNavigate } from "react-router-dom";
 import authOperations from '../../redux/auth/authOperations';
 
 import style from './PageLogin.module.css';
@@ -7,6 +8,7 @@ import style from './PageLogin.module.css';
 function PageLogin() {
   const dispatch = useDispatch();
   const [form, setForm] = useState({ email: '', password: '' });
+  const navigate = useNavigate();
 
   const handleChange = event => {
     const { name, value } = event.currentTarget;
@@ -20,6 +22,10 @@ function PageLogin() {
   };
 
   const { email, password } = form;
+
+  const handleClick = () => {
+    navigate("/register");
+  };
 
   return (
     <section className={style.PageLoginSection}>
@@ -52,7 +58,7 @@ function PageLogin() {
         </label>
             <button className={style.pageLogInBtn} type="submit" >LOG IN</button>
             <span></span>
-            <button className={style.pageLogInBtn} type="submit" disabled={true}>REGISTER</button>
+            <button className={style.pageLogInBtn} type="button" onClick={handleClick}>REGISTER</button>
       </form>
     </section>
   );
