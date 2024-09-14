@@ -1,18 +1,19 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, lazy, Suspense} from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
-//import PrivateRoute from '../../routes/PrivatRoutes';
+import PrivateRoute from '../../routes/PrivatRoutes';
 import PublicRoute from '../../routes/PublicRoutes';
 import authOperations from '../../redux/auth/authOperations';
 import authSelectors from '../../redux/auth/authSelectors';
 import Loader from '../Loader/Loader';
-import AppBar from '../AppBar/AppBar';
+import Header from '../Header/Header';
 import { ToastContainer } from 'react-toastify';
 
-const PageHome = lazy(() => import('../../pages/PageHome/PageHome'));
+const MainPage = lazy(() => import('../../pages/MainPage/MainPage'));
 const PageRegistration = lazy(() => import('../../pages/PageRegistration/PageRegistration'));
 const PageLogin = lazy(() => import('../../pages/PageLogin/PageLogin'));
-const Modal = lazy(() => import('../../pages/ModalRecommendation/Modal'));
+const Modal = lazy(() => import('../../pages/Modal/Modal'));
+const DiaryPage = lazy(() => import('../../pages/DiaryPage/DiaryPage'));
 
 
 
@@ -28,7 +29,7 @@ const App = () => {
     <>
       {!isFetchingCurrentUser && (
         <>
-          <AppBar />
+          <Header />
           <Suspense fallback={<Loader />}>
             <Routes>
               <Route
@@ -36,7 +37,7 @@ const App = () => {
                 exact
                 element={
                   <PublicRoute>
-                    <PageHome />
+                    <MainPage />
                   </PublicRoute>
                 }
               />
@@ -62,6 +63,14 @@ const App = () => {
                   <PublicRoute>
                     < PageLogin />
                   </PublicRoute>
+                }
+              />
+              <Route
+                path="info"
+                element={
+                  <PrivateRoute>
+                    <DiaryPage />
+                  </PrivateRoute>
                 }
               />
              
