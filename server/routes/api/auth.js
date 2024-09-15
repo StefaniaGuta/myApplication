@@ -6,11 +6,6 @@ const Joi = require("joi");
 require("dotenv").config();
 const authMiddleware = require("../../middlewares/authMiddleware");
 
-
-const joiSubscriptionSchema = Joi.object({
-  subscription: Joi.string().valid('starter', 'pro', 'business').required(),
-});
-
 router.post("/users/signup", async (req, res) => {
   const { email, password, name } = req.body;
 
@@ -30,16 +25,26 @@ router.post("/users/signup", async (req, res) => {
       email,
       password,
       name,
-      subscription: "starter"
+      subscription: "starter",
     });
 
     await newUser.save();
 
+    const payload = {
+      id: newUser._id,
+    };
+
+    const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: "1h" });
+
+    newUser.token = token;
+    await newUser.save();
+
     res.status(201).json({
+      token,
       user: {
         email: newUser.email,
         name: newUser.name,
-        subscription: newUser.subscription
+        subscription: newUser.subscription,
       },
     });
   } catch (error) {
@@ -114,35 +119,6 @@ router.get("/users/current", authMiddleware, async (req, res) => {
   } catch (e) {
     console.log(e);
     res.status(500).json({message: "Internal Server Error"})
-  }
-});
-
-router.patch("/", authMiddleware, async (req, res, next) => {
-  const { error, value } = joiSubscriptionSchema.validate(req.body);
-  if (error) {
-    return res.status(400).json({ message: error.details[0].message });
-  }
-
-  const { subscription } = value;
-
-  try {
-    const user = await User.findById(req.user._id); 
-    if (!user) {
-      return res.status(404).json({ message: "User not found" });
-    }
-
-    user.subscription = subscription;
-    await user.save();
-
-    res.status(200).json({
-      user: {
-        email: user.email,
-        name:user.name,
-        subscription: user.subscription
-      },
-    });
-  } catch (err) {
-    next(err);
   }
 });
 

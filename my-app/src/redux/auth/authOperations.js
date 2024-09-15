@@ -38,11 +38,20 @@ export const logIn = createAsyncThunk(
 export const logOut = createAsyncThunk(
   'auth/logout',
   async (_, thunkAPI) => {
+    const state = thunkAPI.getState();
+    const token = state.auth.token || localStorage.getItem('token');
+
+    if (!token) {
+      return thunkAPI.rejectWithValue('No token available for logout');
+    }
+
     try {
-      await axios.get(`${API_URL}/users/logout`);
-      console.log('we are logouted')
+      await axios.get(`${API_URL}/users/logout`, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      console.log('we are logged out');
     } catch (error) {
-      console.log(" eroare logout");
+      console.log("error during logout");
       return thunkAPI.rejectWithValue(error.response.data);
     }
   }
