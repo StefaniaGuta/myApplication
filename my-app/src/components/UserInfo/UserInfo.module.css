@@ -1,42 +1,41 @@
-.MenuContainer {
-  display: flex;
-  align-items: center;
+.MenuContainer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 280px;
+    position: absolute;
+    top: 70px;
+    display: flex;
+    background-color: #EFF1F3;
 }
 
-.MenuBox  {
-  display: flex;
-  margin-right: 20px;
-}
-
-.MenuTitle  {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1px;
-  color: grey;
-  transition: all 0.5s ease;
-  text-shadow: 2px 2px 4px rgb(85, 85, 132);
-  width: 150px;
-  text-align: center;
-  text-transform: capitalize;
-}
-
-.MenuBtn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100px;
-  height: 100%;
-  padding: 5px;
-  border-radius: 20px;
-  color: #ffffff;
-  cursor: pointer;
-  font-size: 15px;
-  box-shadow: 17px 17px 84px 18px rgba(21, 15, 15, 0.2) inset;
-  border: 1px solid rgb(108, 107, 107);
+.MenuContainer span {
+    width: 32px;
+height: 0px;
+rotate: 90deg;
+border-top: 2px solid #E0E0E0
 
 }
 
-.MenuBtn:hover,
-.MenuBtn:focus {
-  background-color: rgb(114, 113, 114);
+.UserName {
+    font-family: Verdana;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17.01px;
+    letter-spacing: 0.04em;
+    text-align: right;
+    text-transform: capitalize;
+}
+
+.ExitBtn {
+    width: 32px;
+    font-family: Verdana;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17.01px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: #9B9FAA;
+    border: 0;
+    padding: 0;
 }

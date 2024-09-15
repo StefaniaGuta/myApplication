@@ -3,6 +3,7 @@
    width: 300px;
    padding: 10px;
    border-bottom: 2px solid #E0E0E0;
+   position: relative;
 }
 
 .Box {

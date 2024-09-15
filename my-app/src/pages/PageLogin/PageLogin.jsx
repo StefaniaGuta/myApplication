@@ -19,6 +19,7 @@ function PageLogin() {
     event.preventDefault();
     dispatch(authOperations.logIn({ ...form }));
     setForm({ email: '', password: '' });
+    navigate("/")
   };
 
   const { email, password } = form;

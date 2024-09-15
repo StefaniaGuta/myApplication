@@ -22,6 +22,7 @@ function PageRegistration() {
     e.preventDefault();
     dispatch(authOperations.register({ ...form }));
     resetForm();
+    navigate("/");
   };
 
   const { name, email, password } = form;
