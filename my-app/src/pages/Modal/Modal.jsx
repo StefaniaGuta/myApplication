@@ -18,8 +18,6 @@ const Modal = () => {
         <span className={style.modalBorder}></span>
 
         <p className={style.foodList}>Foods you should not eat</p>
-
-
         <button className={style.modalBtn} type="submit">
           Start losing weight
         </button>

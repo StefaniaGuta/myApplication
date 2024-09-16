@@ -1,9 +1,6 @@
 .SummarySection {
-  width: 280px;
-  height: 360px;
-  top: 651px;
-  gap: 0px;
-  opacity: 0px;
+  width: 100vw;
+  height: 350px;
   background-color: #F0F1F3;
   padding: 10px;
   font-family: Verdana;
@@ -31,7 +28,5 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
+  max-width: 300px;
 }
-
-
-

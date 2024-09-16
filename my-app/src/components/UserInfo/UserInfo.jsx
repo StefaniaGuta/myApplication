@@ -9,11 +9,8 @@ function UserInfo() {
   const user = useSelector((state) => state.auth.user);
   
   return (
-    <>
     <section className={style.MenuContainer}>
-      
-        <h1 className={style.UserName}> {user.name} </h1>
-   
+      <h1 className={style.UserName}> {user.name} </h1>
       <span></span>
       <button className={style.ExitBtn}
         type="button"
@@ -22,7 +19,6 @@ function UserInfo() {
         Exit
       </button>
     </section>
-    </>
   );
 }
 

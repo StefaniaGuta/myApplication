@@ -1,112 +1,112 @@
 .PageHomeSection{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 280px;
-    height: 600px;
-    margin-top: 50px;
-    padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100vw;
+  height: 500px;
+  margin-top: 50px;
+  padding: 10px;
   }
   
-  .PageHomeTitle {
-    font-family: Verdana;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 25.2px;
-    text-align: left;
-    width: 250px;
-    height: 50px;
-    color: #212121;
-  
-  }
-  
-  .HomeForm{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .PageHomeInput {
-    width: 250px;
-    height: 36px;
-    margin: 10px;
-    box-sizing: border-box;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    border-bottom: 1px solid #E0E0E0;
-  }
-  
-  .PageHomeInput::placeholder {
-    font-family: Verdana;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 17.01px;
-    letter-spacing: 0.04em;
-    text-align: left;
-    color: #9B9FAA;
-  }
-  
-  .RadioGroup{
-    width: 250px;
-    height: 45px;
-    border: none;
-    margin: 20px 0 0 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 10px;
-  }
-  
-  .RadioGroup legend{
-    font-family: Verdana;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 17.01px;
-    letter-spacing: 0.04em;
-    text-align: left;
-    color:#9B9FAA;
-  }
-  
-  .RadioGroup label{
-    font-family: Verdana;
-    line-height: 17.01px;
-    letter-spacing: 0.04em;
-    color: #9B9FAA;
-    display: flex;
-    align-items: flex-end;
-  }
-  
-  .RadioGroup label:hover{
-    color: #FC842D;
-    font-weight: 600;
-  }
-  
-  .RadioGroup input{
-    width: 20px;
-    height: 16px;
-  }
-  
-  .PageHomeBtn {
-    width: 210px;
-    height: 44px;
-    margin-top: 20px;
-    border-radius: 30px;
-    border: 2px solid #fc842d;
-    background-color: #FFFFFF;
-    font-family: Verdana;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 17.01px;
-    letter-spacing: 0.04em;
-    text-align: center;
-    color: #FC842D;
-    align-items: center;
-  }
-  
-  .PageHomeBtn:hover,
-  .PageHomeBtn:focus {
-    background-color: #FC842D;
-    box-shadow: 0px 4px 10px 0px #FC842D80;
-    color: #FFFFFF;
-  }
+.PageHomeTitle {
+  font-family: Verdana;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25.2px;
+  text-align: left;
+  width: 300px;
+  height: 50px;
+  color: #212121;
+  padding-left: 10px;
+}
+
+.HomeForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.PageHomeInput {
+  width: 280px;
+  height: 36px;
+  margin: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.PageHomeInput::placeholder {
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17.01px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color: #9B9FAA;
+}
+
+.RadioGroup{
+  width: 280px;
+  height: 45px;
+  border: none;
+  margin: 20px 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.RadioGroup legend{
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17.01px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color:#9B9FAA;
+}
+
+.RadioGroup label{
+  font-family: Verdana;
+  line-height: 17.01px;
+  letter-spacing: 0.04em;
+  color: #9B9FAA;
+  display: flex;
+  align-items: flex-end;
+}
+
+.RadioGroup label:hover{
+  color: #FC842D;
+  font-weight: 600;
+}
+
+.RadioGroup input{
+  width: 20px;
+  height: 16px;
+}
+
+.PageHomeBtn {
+  width: 210px;
+  height: 44px;
+  margin-top: 20px;
+  border-radius: 30px;
+  border: 2px solid #fc842d;
+  background-color: #FFFFFF;
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17.01px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #FC842D;
+  align-items: center;
+}
+
+.PageHomeBtn:hover,
+.PageHomeBtn:focus {
+  background-color: #FC842D;
+  box-shadow: 0px 4px 10px 0px #FC842D80;
+  color: #FFFFFF;
+}

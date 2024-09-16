@@ -28,17 +28,16 @@ const Menu = ({ isOpen, onClose }) => {
   if (!isOpen) {
     return null;
   }
-    
   return (
-     <section className={style.MenuSection}>
+     <section className={style.MenuSection} style={{ overflowY: 'hidden'}}>
      <nav className={style.MenuNav} onClick={onClose}>
-       <Link className={style.MenuLink} to="/diary">
-         DIARY
-       </Link>
-       
-       <Link className={style.MenuLink} to="/calculator">
-         CALCULATOR
-       </Link>
+        <Link className={style.MenuLink} to="/diary">
+          DIARY
+        </Link>
+        <br></br>
+        <Link className={style.MenuLink} to="/calculator">
+          CALCULATOR
+        </Link>
      </nav>
      </section>
       

@@ -1,41 +1,40 @@
 .MenuContainer{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 280px;
-    position: absolute;
-    top: 70px;
-    display: flex;
-    background-color: #EFF1F3;
+	display: flex;
+	padding: 0 0 0 200px;
+	align-items: center;
+	width: 100vw;
+	position: absolute;
+	top: 70px;
+	background-color: #EFF1F3;
 }
 
 .MenuContainer span {
-    width: 32px;
-height: 0px;
-rotate: 90deg;
-border-top: 2px solid #E0E0E0
+  width: 32px;
+	height: 0px;
+	rotate: 90deg;
+	border-top: 2px solid #E0E0E0
 
 }
 
 .UserName {
-    font-family: Verdana;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 17.01px;
-    letter-spacing: 0.04em;
-    text-align: right;
-    text-transform: capitalize;
+	font-family: Verdana;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 17.01px;
+	letter-spacing: 0.04em;
+	text-align: right;
+	text-transform: capitalize;
 }
 
 .ExitBtn {
-    width: 32px;
-    font-family: Verdana;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 17.01px;
-    letter-spacing: 0.04em;
-    text-align: left;
-    color: #9B9FAA;
-    border: 0;
-    padding: 0;
+	width: 32px;
+	font-family: Verdana;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 17.01px;
+	letter-spacing: 0.04em;
+	text-align: left;
+	color: #9B9FAA;
+	border: 0;
+	padding: 0;
 }

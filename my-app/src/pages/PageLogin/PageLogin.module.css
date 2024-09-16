@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 280px;
+  width: 100vw;
   height: 353px;
   margin-top: 50px;
 }
@@ -21,7 +21,7 @@
 }
 
 .PageLogInInput {
-  width: 250px;
+  width: 280px;
   height: 36px;
   margin: 10px;
   box-sizing: border-box;
