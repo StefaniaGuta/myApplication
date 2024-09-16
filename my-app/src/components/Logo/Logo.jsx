@@ -27,6 +27,7 @@ const Logo = () => {
       setIsProcessing(false); 
     }, 100); 
   };
+  
   return (
     <>
       <nav className={style.NavLogo}>

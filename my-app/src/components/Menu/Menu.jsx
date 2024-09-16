@@ -31,7 +31,7 @@ const Menu = ({ isOpen, onClose }) => {
     
   return (
      <section className={style.MenuSection}>
-     <nav className={style.MenuNav}>
+     <nav className={style.MenuNav} onClick={onClose}>
        <Link className={style.MenuLink} to="/diary">
          DIARY
        </Link>
