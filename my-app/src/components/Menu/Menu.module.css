@@ -1,0 +1,37 @@
+.MenuSection {
+  width: 100vw;
+  height: 100vh;
+  background-color: #264061;
+  position: absolute;
+  top: 70px;
+  z-index: 1;
+   
+}
+
+.MenuNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.MenuNav:last-child{
+  margin-bottom: 50px;
+  color: red;
+}
+
+.MenuLink{
+  font-family: Verdana;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.88px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.MenuLink:focus,
+.MenuLink:hover {
+  color: #9B9FAA;
+} 
