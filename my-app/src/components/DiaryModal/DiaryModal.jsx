@@ -66,10 +66,10 @@ const DiaryModal = ({ isOpen, onClose }) => {
           <input
             className={style.ModalInput}
             type="text"
+            required
             placeholder="Enter product name"
             name="name"                 
             value={form.name}           
-            required
             autoComplete='off'
             onChange={handleChange}       
           />
@@ -78,10 +78,10 @@ const DiaryModal = ({ isOpen, onClose }) => {
           <input
             className={style.ModalInput}
             type="number"
+            required
             placeholder="Grams"
             name="grams"                 
             value={form.grams}           
-            required
             onChange={handleChange}       
           />
         </label>
