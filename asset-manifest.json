@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/myApplication/static/css/main.509b6403.css",
+    "main.js": "/myApplication/static/js/main.6df0e990.js",
+    "static/css/459.a0dc7a38.chunk.css": "/myApplication/static/css/459.a0dc7a38.chunk.css",
+    "static/js/459.7e01e595.chunk.js": "/myApplication/static/js/459.7e01e595.chunk.js",
+    "static/css/212.54d2a089.chunk.css": "/myApplication/static/css/212.54d2a089.chunk.css",
+    "static/js/212.6695d8cc.chunk.js": "/myApplication/static/js/212.6695d8cc.chunk.js",
+    "static/css/886.26e6268b.chunk.css": "/myApplication/static/css/886.26e6268b.chunk.css",
+    "static/js/886.768d00ed.chunk.js": "/myApplication/static/js/886.768d00ed.chunk.js",
+    "static/css/409.fb5f4d85.chunk.css": "/myApplication/static/css/409.fb5f4d85.chunk.css",
+    "static/js/409.02f0f0eb.chunk.js": "/myApplication/static/js/409.02f0f0eb.chunk.js",
+    "static/css/893.44fe050d.chunk.css": "/myApplication/static/css/893.44fe050d.chunk.css",
+    "static/js/893.4a992de6.chunk.js": "/myApplication/static/js/893.4a992de6.chunk.js",
+    "index.html": "/myApplication/index.html",
+    "main.509b6403.css.map": "/myApplication/static/css/main.509b6403.css.map",
+    "main.6df0e990.js.map": "/myApplication/static/js/main.6df0e990.js.map",
+    "459.a0dc7a38.chunk.css.map": "/myApplication/static/css/459.a0dc7a38.chunk.css.map",
+    "459.7e01e595.chunk.js.map": "/myApplication/static/js/459.7e01e595.chunk.js.map",
+    "212.54d2a089.chunk.css.map": "/myApplication/static/css/212.54d2a089.chunk.css.map",
+    "212.6695d8cc.chunk.js.map": "/myApplication/static/js/212.6695d8cc.chunk.js.map",
+    "886.26e6268b.chunk.css.map": "/myApplication/static/css/886.26e6268b.chunk.css.map",
+    "886.768d00ed.chunk.js.map": "/myApplication/static/js/886.768d00ed.chunk.js.map",
+    "409.fb5f4d85.chunk.css.map": "/myApplication/static/css/409.fb5f4d85.chunk.css.map",
+    "409.02f0f0eb.chunk.js.map": "/myApplication/static/js/409.02f0f0eb.chunk.js.map",
+    "893.44fe050d.chunk.css.map": "/myApplication/static/css/893.44fe050d.chunk.css.map",
+    "893.4a992de6.chunk.js.map": "/myApplication/static/js/893.4a992de6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.509b6403.css",
+    "static/js/main.6df0e990.js"
+  ]
+}
