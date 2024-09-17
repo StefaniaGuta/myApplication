@@ -2,6 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://StefaniaGuta.github.io/myApplication/",
   "dependencies": {
     "@babel/plugin-transform-private-property-in-object": "^7.24.7",
     "@material/radio": "^14.0.0",
