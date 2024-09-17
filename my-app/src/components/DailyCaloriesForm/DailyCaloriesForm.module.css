@@ -75,6 +75,7 @@
   color: #9B9FAA;
   display: flex;
   align-items: flex-end;
+  cursor: pointer;
 }
 
 .RadioGroup label:hover{
@@ -85,6 +86,7 @@
 .RadioGroup input{
   width: 20px;
   height: 16px;
+  cursor: pointer;
 }
 
 .PageHomeBtn {
