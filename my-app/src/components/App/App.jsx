@@ -14,6 +14,7 @@ const PageRegistration = lazy(() => import('../../pages/PageRegistration/PageReg
 const PageLogin = lazy(() => import('../../pages/PageLogin/PageLogin'));
 const Modal = lazy(() => import('../../pages/Modal/Modal'));
 const DiaryPage = lazy(() => import('../../pages/DiaryPage/DiaryPage'));
+const Calculator = lazy(() => import('../../pages/Calculator/Calculator'));
 
 
 
@@ -70,6 +71,14 @@ const App = () => {
                 element={
                   <PrivateRoute>
                     <DiaryPage />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="calculator"
+                element={
+                  <PrivateRoute>
+                    <Calculator />
                   </PrivateRoute>
                 }
               />
