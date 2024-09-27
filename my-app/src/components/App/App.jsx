@@ -14,7 +14,7 @@ const PageRegistration = lazy(() => import('../../pages/PageRegistration/PageReg
 const PageLogin = lazy(() => import('../../pages/PageLogin/PageLogin'));
 const Modal = lazy(() => import('../../pages/Modal/Modal'));
 const DiaryPage = lazy(() => import('../../pages/DiaryPage/DiaryPage'));
-const Calculator = lazy(() => import('../../pages/Calculator/Calculator'));
+const Calculator = lazy(() => import('../../pages/CalculatorPage/CalculatorPage'));
 
 
 

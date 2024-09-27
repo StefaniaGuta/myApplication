@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 import calendar from './calendar.png'
-import DateCalendarValue from '../../components/Calendar/Calendar';
-import DiaryModal from '../../components/DiaryModal/DiaryModal';
+import DiaryDateСalendar from '../../components/DiaryDateСalendar/DiaryDateСalendar';
+import DiaryAddProductForm from '../../components/DiaryAddProductForm/DiaryAddProductForm';
 import Summary from "../../components/Summary/Summary";
 
 import style from './DiaryPage.module.css';
@@ -43,7 +43,7 @@ const DiaryPage= () => {
 
         {isCalendarOpen && (
           <div className={style.CalendarContainer}>
-            <DateCalendarValue />
+            <DiaryDateСalendar />
           </div>
         )}
         
@@ -51,7 +51,7 @@ const DiaryPage= () => {
       </section>
 
       <Summary/>
-      <DiaryModal isOpen={isModalOpen} onClose={handleMenuClick} />
+      <DiaryAddProductForm isOpen={isModalOpen} onClose={handleMenuClick} />
     </>
 
   )

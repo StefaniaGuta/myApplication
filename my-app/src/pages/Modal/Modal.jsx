@@ -1,12 +1,15 @@
 import React from 'react';
 import { useNavigate} from "react-router-dom";
 import vector from './vector.png'
+import DailyCalorieIntake from '../../components/DailyCalorieIntake/DailyCalorieIntake';
 
 import style from './Modal.module.css'
 
 const Modal = () => {
   let navigate = useNavigate();
-  
+  const handleRedirect = () => {
+      navigate('/login');
+}
    return (
     <>
     <button className={style.modalCloseButton} type='button' onClick={() => navigate(-1)}>
@@ -18,7 +21,8 @@ const Modal = () => {
         <span className={style.modalBorder}></span>
 
         <p className={style.foodList}>Foods you should not eat</p>
-        <button className={style.modalBtn} type="submit">
+        <DailyCalorieIntake/>
+        <button className={style.modalBtn} type="submit" onClick={handleRedirect}>
           Start losing weight
         </button>
     </section>

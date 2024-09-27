@@ -9,11 +9,10 @@ export const register = createAsyncThunk(
   async (credentials, thunkAPI) => {
     try {
       const { data } = await axios.post(`${API_URL}/users/signup`, credentials);
-      console.log(data)
-      console.log('we are registred');
+      const { token } = data;
+      localStorage.setItem('token', token);
       return data; 
     } catch (error) {
-      console.log("eroare register");
       return thunkAPI.rejectWithValue(error.response.data);
     }
   }
@@ -24,11 +23,10 @@ export const logIn = createAsyncThunk(
   async (credentials, thunkAPI) => {
     try {
       const { data } = await axios.post(`${API_URL}/users/login`, credentials);
-      console.log('we are logined')
-      console.log(data);
+      const { token } = data;
+      localStorage.setItem('token', token);
       return data;
     } catch (error) {
-      console.log("eroare login");
       return thunkAPI.rejectWithValue(error.response.data);
     }
   }
@@ -49,9 +47,7 @@ export const logOut = createAsyncThunk(
       await axios.get(`${API_URL}/users/logout`, {
         headers: { Authorization: `Bearer ${token}` },
       });
-      console.log('we are logged out');
     } catch (error) {
-      console.log("error during logout");
       return thunkAPI.rejectWithValue(error.response.data);
     }
   }
@@ -72,10 +68,8 @@ export const fetchCurrentUser = createAsyncThunk(
     const res = await axios.get(`${API_URL}/users/current`, {
       headers: { Authorization: `Bearer ${token}` },
     });
-    console.log('this is current user')
       return res.data;
     } catch (e) {
-      console.log('eroare current')
       return thunkAPI.rejectWithValue(e.message);
     }
   });

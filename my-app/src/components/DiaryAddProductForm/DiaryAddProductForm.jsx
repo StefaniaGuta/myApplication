@@ -3,9 +3,9 @@ import React from 'react';
 import { useEffect, useRef } from 'react';
 import vector from './vector.png'
 
-import style from './DiaryModal.module.css'
+import style from './DiaryAddProductForm.module.css'
 
-const DiaryModal = ({ isOpen, onClose }) => {
+const DiaryAddProductForm = ({ isOpen, onClose }) => {
   
   const [form, setForm] = useState({
     name: '',
@@ -91,5 +91,4 @@ const DiaryModal = ({ isOpen, onClose }) => {
         </>
         )
 }
-
-export default DiaryModal;
+export default DiaryAddProductForm;
